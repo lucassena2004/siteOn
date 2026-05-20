@@ -1,24 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#1e40af">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icons/icon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <title>Plênio PWA</title>
 </head>
 <body>
-    
-    <h2>Tela de Login</h2>
+    <div class="app-shell">
+        <header>
+            <div class="app-logo">
+                <img src="icons/icon.svg" alt="Plênio logo">
+            </div>
+            <div>
+                <h1>Plênio</h1>
+                <p>Aplicativo PWA instalável para navegador</p>
+            </div>
+        </header>
 
-<form>
-    <label for = "email"> Email: </label><br>
-    <input type = "email" id = "email" name = "email"><br><br>
-    
-    <label for = "senha"> Senha: </label><br>
-    <input type = "password" id = "senha" name = "senha"><br><br>
-    <input type = "submit" value = "Entrar">
+        <main class="card">
+            <h2>Login Seguro</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="••••••••" required>
+                </div>
+                <button type="submit">Entrar</button>
+            </form>
+        </main>
 
-    <h2>Final</h2>
-
-</form>
+        <footer>Abra este site no navegador e instale no PC ou no celular para usar como app.</footer>
+    </div>
+    <div id="snackbar" class="snackbar"></div>
+    <script src="main.js"></script>
 </body>
 </html>

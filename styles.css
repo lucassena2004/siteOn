@@ -1,0 +1,142 @@
+/* Styles for Plênio PWA */
+:root {
+    color-scheme: dark;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+    line-height: 1.5;
+}
+* {
+    box-sizing: border-box;
+}
+html, body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    background: radial-gradient(circle at top left, rgba(59, 130, 246, .2), transparent 28%),
+                radial-gradient(circle at bottom right, rgba(99, 102, 241, .15), transparent 24%),
+                #0f172a;
+}
+.app-shell {
+    width: min(100%, 540px);
+    padding: 28px;
+    border-radius: 24px;
+    background: rgba(15, 23, 42, 0.92);
+    border: 1px solid rgba(148, 163, 184, 0.15);
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.35);
+}
+header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+.app-logo {
+    width: 62px;
+    height: 62px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.app-logo img {
+    width: 100%;
+    height: 100%;
+}
+header h1 {
+    margin: 0;
+    font-size: 1.85rem;
+}
+header p {
+    margin: 4px 0 0;
+    color: #cbd5e1;
+}
+.card {
+    background: rgba(15, 23, 42, 0.85);
+    border-radius: 20px;
+    padding: 26px;
+    border: 1px solid rgba(148, 163, 184, 0.12);
+}
+.card h2 {
+    margin: 0 0 18px;
+    font-size: 1.45rem;
+    letter-spacing: 0.01em;
+}
+.form-group {
+    margin-bottom: 16px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: #cbd5e1;
+}
+.form-group input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 14px;
+    border: 1px solid rgba(148, 163, 184, 0.22);
+    background: rgba(15, 23, 42, 0.95);
+    color: #f8fafc;
+    font-size: 1rem;
+}
+.form-group input:focus {
+    outline: none;
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.15);
+}
+button {
+    width: 100%;
+    padding: 14px 16px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 25px rgba(59, 130, 246, 0.25);
+}
+footer {
+    margin-top: 22px;
+    color: #94a3b8;
+    text-align: center;
+    font-size: 0.95rem;
+}
+.snackbar {
+    position: fixed;
+    left: 50%;
+    bottom: 24px;
+    transform: translateX(-50%) translateY(100%);
+    min-width: 260px;
+    padding: 14px 18px;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.95);
+    color: #e2e8f0;
+    text-align: center;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    opacity: 0;
+    z-index: 20;
+}
+.snackbar.visible {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+@media (max-width: 520px) {
+    body {
+        padding: 16px;
+    }
+    .app-shell {
+        padding: 22px;
+    }
+}
