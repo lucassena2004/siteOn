@@ -1,7 +1,9 @@
 const CACHE_NAME = 'plenio-pwa-v1';
 const ASSETS_TO_CACHE = [
   './',
+  './landing.html',
   './index.html',
+  './dashboard.html',
   './styles.css',
   './main.js',
   './manifest.json',
