@@ -9,10 +9,16 @@ if ('serviceWorker' in navigator) {
   });
 }
 
+
 loginForm?.addEventListener('submit', event => {
   event.preventDefault();
-  const email = document.getElementById('email')?.value || '';
-  showSnackbar(`Bem-vindo, ${email}`);
+  const rm = document.getElementById('rm').value;
+  const senha = document.getElementById('senha').value;
+  if (rm === '24850' && senha === '123456') {
+    showSnackbar('Login realizado com sucesso!');
+  } else {
+    showSnackbar('RM ou senha incorretos.');
+  }
 });
 
 function showSnackbar(message) {
