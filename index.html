@@ -8,22 +8,34 @@
     <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="icons/icon.svg">
     <link rel="stylesheet" href="styles.css">
-    <title>Plênio PWA</title>
+    <title>Login - Plênio PWA</title>
 </head>
 <body>
-    <div class="app-shell">
+    <div class="app-shell login-page">
+        <main class="login-container">
+            <button id="btn-back" class="btn-back">← Voltar</button>
+            
+            <div class="login-content">
+                <div class="login-header">
+                    <div class="logo-medium">📱</div>
+                    <h1>Faça Login</h1>
+                </div>
 
+                <form id="login-form" class="login-form">
+                    <div class="form-group">
+                        <label for="rm">RM</label>
+                        <input type="text" id="rm" name="rm" placeholder="Digite seu RM" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Entrar</button>
+                </form>
+            </div>
 
-
-        <main style="max-width:320px;margin:auto;padding:1em 0;">
-            <form id="login-form" style="display:flex;flex-direction:column;gap:0.75em;">
-                <input type="text" id="rm" name="rm" placeholder="RM" required style="padding:0.5em;font-size:1em;">
-                <input type="password" id="senha" name="senha" placeholder="Senha" required style="padding:0.5em;font-size:1em;">
-                <button type="submit" style="padding:0.5em;font-size:1em;cursor:pointer;">Entrar</button>
-            </form>
+            <footer class="login-footer">Abra este site no navegador e instale no PC ou no celular para usar como app.</footer>
         </main>
-
-        <footer>Abra este site no navegador e instale no PC ou no celular para usar como app.</footer>
     </div>
     <div id="snackbar" class="snackbar"></div>
     <script src="main.js"></script>

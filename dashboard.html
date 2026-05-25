@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#1e40af">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icons/icon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <title>Dashboard - Plênio PWA</title>
+</head>
+<body>
+    <div class="app-shell dashboard-page">
+        <header class="dashboard-header">
+            <h1>Plênio</h1>
+            <button id="btn-logout" class="btn-logout">Sair</button>
+        </header>
+
+        <main class="dashboard-container">
+            <div class="welcome-section">
+                <div class="welcome-icon">👋</div>
+                <h2>Bem-vindo!</h2>
+                <p id="user-name" class="user-info">RM: <span id="rm-display">24850</span></p>
+            </div>
+
+            <div class="dashboard-cards">
+                <div class="dashboard-card">
+                    <span class="card-icon">📚</span>
+                    <h3>Aulas</h3>
+                    <p class="card-value">12</p>
+                </div>
+                <div class="dashboard-card">
+                    <span class="card-icon">📊</span>
+                    <h3>Notas</h3>
+                    <p class="card-value">8.5</p>
+                </div>
+                <div class="dashboard-card">
+                    <span class="card-icon">✅</span>
+                    <h3>Tarefas</h3>
+                    <p class="card-value">5/8</p>
+                </div>
+            </div>
+
+            <div class="quick-actions">
+                <button class="action-button">
+                    <span>📝</span>
+                    <span>Minhas Aulas</span>
+                </button>
+                <button class="action-button">
+                    <span>📋</span>
+                    <span>Tarefas</span>
+                </button>
+                <button class="action-button">
+                    <span>📞</span>
+                    <span>Contato</span>
+                </button>
+            </div>
+        </main>
+
+        <footer class="dashboard-footer">
+            <p>Plênio © 2024 - Sua solução educacional</p>
+        </footer>
+    </div>
+
+    <div id="snackbar" class="snackbar"></div>
+    <script src="main.js"></script>
+</body>
+</html>
